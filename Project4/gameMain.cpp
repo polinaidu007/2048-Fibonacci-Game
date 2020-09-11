@@ -14,17 +14,17 @@ int main()
 	struct player *p1=create_player();
 	createFibArray();
 	int n=playGame();
-	int rows, cols;
+	int rows, cols,winning_number;
 	if (n == 1)
 	{
 		rows = 2, cols = 2;
+		winning_number = 7;
 	}
 	else
 	{
 		rows = 4, cols = 4;
+		winning_number = 2048;
 	}
-	int winning_number = 2 * rows *rows - 1;
-	winning_number = fibArray[winning_number - 1];
 	int x,max;
 	int **gameBoard = createBoard(rows,cols);
 	do
